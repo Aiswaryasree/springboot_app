@@ -1,3 +1,4 @@
 FROM openjdk:8-jdk-alpine
-COPY /target/hello-0.0.1-SNAPSHOT.jar SpringBootFormExample-1.0.jar
-ENTRYPOINT ["java", "-jar", "/SpringBootFormExample-1.0.jar"]
+EXPOSE 8080
+ADD target/hello-0.0.1-SNAPSHOT.jar hello-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java","-jar","/hello-0.0.1-SNAPSHOT.jar"]
